@@ -10,6 +10,8 @@ export class AllComponent implements OnInit {
     { name: 'From Event', routerLink: 'from-event' },
     { name: 'Interval', routerLink: 'interval' },
     { name: 'Of-From', routerLink: 'of-from' },
+    { name: 'ToArray', routerLink: 'to-array' },
+    { name: 'Custom Observable', routerLink: 'custom-observable' },
   ];
 
   constructor() {}
