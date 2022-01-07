@@ -1,3 +1,4 @@
+import { FilterComponent } from './observable/filter/filter.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
@@ -47,6 +48,10 @@ const routes: Routes = [
       {
         path: 'pluck',
         component: PluckComponent,
+      },
+      {
+        path: 'filter',
+        component: FilterComponent,
       },
     ],
   },

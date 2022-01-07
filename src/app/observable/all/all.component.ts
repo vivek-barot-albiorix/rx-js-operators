@@ -14,6 +14,7 @@ export class AllComponent implements OnInit {
     { name: 'Custom Observable', routerLink: 'custom-observable' },
     { name: 'Map', routerLink: 'map' },
     { name: 'Pluck', routerLink: 'pluck' },
+    { name: 'Filter', routerLink: 'filter' },
   ];
 
   constructor() {}
