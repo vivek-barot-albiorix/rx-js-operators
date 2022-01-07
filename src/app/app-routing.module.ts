@@ -1,3 +1,5 @@
+import { TakeComponent } from './observable/take/take.component';
+import { TapComponent } from './observable/tap/tap.component';
 import { FilterComponent } from './observable/filter/filter.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
@@ -52,6 +54,14 @@ const routes: Routes = [
       {
         path: 'filter',
         component: FilterComponent,
+      },
+      {
+        path: 'tap',
+        component: TapComponent,
+      },
+      {
+        path: 'take',
+        component: TakeComponent,
       },
     ],
   },

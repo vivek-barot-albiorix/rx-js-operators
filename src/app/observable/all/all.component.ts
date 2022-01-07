@@ -15,6 +15,8 @@ export class AllComponent implements OnInit {
     { name: 'Map', routerLink: 'map' },
     { name: 'Pluck', routerLink: 'pluck' },
     { name: 'Filter', routerLink: 'filter' },
+    { name: 'Tap', routerLink: 'tap' },
+    { name: 'Take', routerLink: 'take' },
   ];
 
   constructor() {}
