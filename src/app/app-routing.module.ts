@@ -1,3 +1,5 @@
+import { SubjectComponent } from './observable/subject/subject.component';
+import { DebounceComponent } from './observable/debounce/debounce.component';
 import { TakeComponent } from './observable/take/take.component';
 import { TapComponent } from './observable/tap/tap.component';
 import { FilterComponent } from './observable/filter/filter.component';
@@ -62,6 +64,14 @@ const routes: Routes = [
       {
         path: 'take',
         component: TakeComponent,
+      },
+      {
+        path: 'debounceTime-distinctUntilChanged',
+        component: DebounceComponent,
+      },
+      {
+        path: 'subject',
+        component: SubjectComponent,
       },
     ],
   },

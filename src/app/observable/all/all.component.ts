@@ -17,6 +17,11 @@ export class AllComponent implements OnInit {
     { name: 'Filter', routerLink: 'filter' },
     { name: 'Tap', routerLink: 'tap' },
     { name: 'Take', routerLink: 'take' },
+    {
+      name: 'DebounceTime & DistinctUntilChanged',
+      routerLink: 'debounceTime-distinctUntilChanged',
+    },
+    { name: 'Subject & Behaviour subject', routerLink: 'subject' },
   ];
 
   constructor() {}
