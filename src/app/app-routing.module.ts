@@ -1,10 +1,12 @@
+import { NgModule } from '@angular/core';
+import { RouterModule, Routes } from '@angular/router';
+
+import { PluckComponent } from './observable/pluck/pluck.component';
+import { MapComponent } from './observable/map/map.component';
 import { CustomObservableComponent } from './observable/custom-observable/custom-observable.component';
 import { ToArrayComponent } from './observable/to-array/to-array.component';
 import { OfFromComponent } from './observable/of-from/of-from.component';
 import { IntervalComponent } from './observable/interval/interval.component';
-import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
-
 import { FromEventComponent } from './observable/from-event/from-event.component';
 import { AllComponent } from './observable/all/all.component';
 import { ObservableComponent } from './observable/observable.component';
@@ -37,6 +39,14 @@ const routes: Routes = [
       {
         path: 'custom-observable',
         component: CustomObservableComponent,
+      },
+      {
+        path: 'map',
+        component: MapComponent,
+      },
+      {
+        path: 'pluck',
+        component: PluckComponent,
       },
     ],
   },

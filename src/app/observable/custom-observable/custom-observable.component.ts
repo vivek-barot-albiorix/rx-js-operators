@@ -39,17 +39,17 @@ export class CustomObservableComponent implements OnInit {
         observer.next('Mongo');
       }, 5000);
     });
-    cusObs1.subscribe(
-      (res: any) => {
+    cusObs1.subscribe({
+      next: (res: any) => {
         this.helperService.print(res, 'customObservableUlElement1');
       },
-      (err) => {
+      error: () => {
         this.techStatus = 'error';
       },
-      () => {
+      complete: () => {
         this.techStatus = 'completed';
-      }
-    );
+      },
+    });
 
     //Ex - 02
 
@@ -67,17 +67,17 @@ export class CustomObservableComponent implements OnInit {
         count++;
       }, 1000);
     });
-    this.subs2 = cusObs2.subscribe(
-      (res: any) => {
+    this.subs2 = cusObs2.subscribe({
+      next: (res: any) => {
         this.helperService.print(res, 'customObservableUlElement2');
       },
-      (err) => {
+      error: () => {
         this.techStatus2 = 'error';
       },
-      () => {
+      complete: () => {
         this.techStatus2 = 'completed';
-      }
-    );
+      },
+    });
 
     //Ex - 03
 
@@ -103,18 +103,13 @@ export class CustomObservableComponent implements OnInit {
         count++;
       }, 1000);
     });
-    cusObs3.subscribe(
-      (res: any) => {
-        console.log(res);
+    cusObs3.subscribe({
+      next: (res: any) => {
         this.names = res;
       },
-      (err) => {
-        this.nameStatus = 'error';
-      },
-      () => {
-        this.nameStatus = 'completed';
-      }
-    );
+      error: (e) => (this.nameStatus = 'error'),
+      complete: () => (this.nameStatus = 'completed'),
+    });
   }
 
   ngOnDestroy(): void {
