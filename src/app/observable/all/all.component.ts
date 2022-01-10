@@ -25,6 +25,8 @@ export class AllComponent implements OnInit {
     { name: 'Concat', routerLink: 'concat' },
     { name: 'MergeMap', routerLink: 'mergeMap' },
     { name: 'ConcatMap', routerLink: 'concatMap' },
+    { name: 'SwitchMap', routerLink: 'switchMap' },
+    { name: 'ExhaustMap', routerLink: 'exhaustMap' },
     { name: 'Subject & Behaviour subject', routerLink: 'subject' },
   ];
 

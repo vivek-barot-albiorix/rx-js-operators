@@ -1,3 +1,5 @@
+import { SwitchmapComponent } from './observable/switchmap/switchmap.component';
+import { ExhaustMapComponent } from './observable/exhaust-map/exhaust-map.component';
 import { ConcatMapComponent } from './observable/concat-map/concat-map.component';
 import { MergeMapComponent } from './observable/merge-map/merge-map.component';
 import { ConcateComponent } from './observable/concate/concate.component';
@@ -88,6 +90,14 @@ const routes: Routes = [
       {
         path: 'concatMap',
         component: ConcatMapComponent,
+      },
+      {
+        path: 'switchMap',
+        component: SwitchmapComponent,
+      },
+      {
+        path: 'exhaustMap',
+        component: ExhaustMapComponent,
       },
       {
         path: 'subject',
