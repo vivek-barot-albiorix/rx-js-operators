@@ -20,6 +20,7 @@ import { SubjectComponent } from './observable/subject/subject.component';
 import { MergeComponent } from './observable/merge/merge.component';
 import { ConcateComponent } from './observable/concate/concate.component';
 import { MergeMapComponent } from './observable/merge-map/merge-map.component';
+import { ConcatMapComponent } from './observable/concat-map/concat-map.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import { MergeMapComponent } from './observable/merge-map/merge-map.component';
     SubjectComponent,
     MergeComponent,
     ConcateComponent,
-    MergeMapComponent
+    MergeMapComponent,
+    ConcatMapComponent
   ],
   imports: [
     BrowserModule,

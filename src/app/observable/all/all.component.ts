@@ -22,8 +22,9 @@ export class AllComponent implements OnInit {
       routerLink: 'debounceTime-distinctUntilChanged',
     },
     { name: 'Merge', routerLink: 'merge' },
-    { name: 'Concate', routerLink: 'concate' },
+    { name: 'Concat', routerLink: 'concat' },
     { name: 'MergeMap', routerLink: 'mergeMap' },
+    { name: 'ConcatMap', routerLink: 'concatMap' },
     { name: 'Subject & Behaviour subject', routerLink: 'subject' },
   ];
 

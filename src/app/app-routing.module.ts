@@ -1,3 +1,4 @@
+import { ConcatMapComponent } from './observable/concat-map/concat-map.component';
 import { MergeMapComponent } from './observable/merge-map/merge-map.component';
 import { ConcateComponent } from './observable/concate/concate.component';
 import { MergeComponent } from './observable/merge/merge.component';
@@ -77,12 +78,16 @@ const routes: Routes = [
         component: MergeComponent,
       },
       {
-        path: 'concate',
+        path: 'concat',
         component: ConcateComponent,
       },
       {
         path: 'mergeMap',
         component: MergeMapComponent,
+      },
+      {
+        path: 'concatMap',
+        component: ConcatMapComponent,
       },
       {
         path: 'subject',
