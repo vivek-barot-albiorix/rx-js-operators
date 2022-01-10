@@ -17,6 +17,9 @@ import { TapComponent } from './observable/tap/tap.component';
 import { TakeComponent } from './observable/take/take.component';
 import { DebounceComponent } from './observable/debounce/debounce.component';
 import { SubjectComponent } from './observable/subject/subject.component';
+import { MergeComponent } from './observable/merge/merge.component';
+import { ConcateComponent } from './observable/concate/concate.component';
+import { MergeMapComponent } from './observable/merge-map/merge-map.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +37,10 @@ import { SubjectComponent } from './observable/subject/subject.component';
     TapComponent,
     TakeComponent,
     DebounceComponent,
-    SubjectComponent
+    SubjectComponent,
+    MergeComponent,
+    ConcateComponent,
+    MergeMapComponent
   ],
   imports: [
     BrowserModule,

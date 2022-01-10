@@ -1,3 +1,6 @@
+import { MergeMapComponent } from './observable/merge-map/merge-map.component';
+import { ConcateComponent } from './observable/concate/concate.component';
+import { MergeComponent } from './observable/merge/merge.component';
 import { SubjectComponent } from './observable/subject/subject.component';
 import { DebounceComponent } from './observable/debounce/debounce.component';
 import { TakeComponent } from './observable/take/take.component';
@@ -68,6 +71,18 @@ const routes: Routes = [
       {
         path: 'debounceTime-distinctUntilChanged',
         component: DebounceComponent,
+      },
+      {
+        path: 'merge',
+        component: MergeComponent,
+      },
+      {
+        path: 'concate',
+        component: ConcateComponent,
+      },
+      {
+        path: 'mergeMap',
+        component: MergeMapComponent,
       },
       {
         path: 'subject',
