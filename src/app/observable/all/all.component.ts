@@ -28,6 +28,7 @@ export class AllComponent implements OnInit {
     { name: 'SwitchMap', routerLink: 'switchMap' },
     { name: 'ExhaustMap', routerLink: 'exhaustMap' },
     { name: 'Subject & Behaviour subject', routerLink: 'subject' },
+    { name: 'ATM', routerLink: 'atm' },
   ];
 
   constructor() {}

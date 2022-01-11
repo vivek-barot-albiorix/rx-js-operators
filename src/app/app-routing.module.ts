@@ -1,3 +1,4 @@
+import { AtmComponent } from './observable/atm/atm.component';
 import { SwitchmapComponent } from './observable/switchmap/switchmap.component';
 import { ExhaustMapComponent } from './observable/exhaust-map/exhaust-map.component';
 import { ConcatMapComponent } from './observable/concat-map/concat-map.component';
@@ -102,6 +103,10 @@ const routes: Routes = [
       {
         path: 'subject',
         component: SubjectComponent,
+      },
+      {
+        path: 'atm',
+        component: AtmComponent,
       },
     ],
   },
