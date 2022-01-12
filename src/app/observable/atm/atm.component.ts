@@ -60,25 +60,29 @@ export class AtmComponent implements AfterViewInit {
       });
   }
 
-  countMinCoins(n, C, m) {
+  countMinCoins(target, coinArray, coinArrayLength) {
     // Base case
-    if (n == 0) {
+    if (target == 0) {
       this.dp[0] = 0;
       return 0;
     }
 
     // If previously computed
     // subproblem occurred
-    if (this.dp[n] != -1) return this.dp[n];
+    if (this.dp[target] != -1) return this.dp[target];
 
     // Initialize result
     let ret = 1000000000;
 
     // Try every coin that has smaller
     // value than n
-    for (let i = 0; i < m; i++) {
-      if (C[i] <= n) {
-        const x = this.countMinCoins(n - C[i], C, m);
+    for (let i = 0; i < coinArrayLength; i++) {
+      if (coinArray[i] <= target) {
+        const x = this.countMinCoins(
+          target - coinArray[i],
+          coinArray,
+          coinArrayLength
+        );
 
         // Check for INT_MAX to avoid
         // overflow and see if result
@@ -88,14 +92,14 @@ export class AtmComponent implements AfterViewInit {
     }
 
     // Memoizing value of current state
-    this.dp[n] = ret;
+    this.dp[target] = ret;
     return ret;
   }
 
-  findSolution(n, C, m) {
+  findSolution(target, coinArray, coinArrayLength) {
     this.output = [];
     // Base Case
-    if (n == 0) {
+    if (target == 0) {
       this.denomination.forEach((it) => {
         this.output.push(it);
       });
@@ -106,15 +110,18 @@ export class AtmComponent implements AfterViewInit {
       return;
     }
 
-    for (let i = 0; i < m; i++) {
+    for (let i = 0; i < coinArrayLength; i++) {
       // Try every coin that has
       // value smaller than n
-      if (n - C[i] >= 0 && this.dp[n - C[i]] + 1 == this.dp[n]) {
+      if (
+        target - coinArray[i] >= 0 &&
+        this.dp[target - coinArray[i]] + 1 == this.dp[target]
+      ) {
         // Add current denominations
-        this.denomination.push(C[i]);
+        this.denomination.push(coinArray[i]);
 
         // Backtrack
-        this.findSolution(n - C[i], C, m);
+        this.findSolution(target - coinArray[i], coinArray, coinArrayLength);
         break;
       }
     }
@@ -122,12 +129,12 @@ export class AtmComponent implements AfterViewInit {
 
   // Function to find the minimum
   // combinations of coins for value X
-  countMinCoinsUtil(X, C, N) {
+  countMinCoinsUtil(target, coinArray, coinArrayLength) {
     // Initialize dp with -1
     this.dp = Array(this.MAX + 1).fill(-1);
 
     // Min coins
-    const isPossible = this.countMinCoins(X, C, N);
+    const isPossible = this.countMinCoins(target, coinArray, coinArrayLength);
 
     // If no solution exists
     if (isPossible == 1000000000) {
@@ -136,7 +143,7 @@ export class AtmComponent implements AfterViewInit {
 
     // Backtrack to find the solution
     else {
-      this.findSolution(X, C, N);
+      this.findSolution(target, coinArray, coinArrayLength);
     }
   }
 }
